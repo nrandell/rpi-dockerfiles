@@ -1,5 +1,7 @@
-Docker Projects Collection
+Raspberry Pi Docker Projects Collection
 ======
+
+Based off https://github.com/nfnty/dockerfiles
 
 `containers` contains reference to container creation and maintenance.
 

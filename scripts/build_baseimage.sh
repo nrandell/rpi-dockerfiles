@@ -13,4 +13,4 @@ DOCKERDIR="${SCRIPTDIR}/../images/${IPREFIX}-${INAME}/${ITAG}"
 cd "${DOCKERDIR}/bootstrap"
 sha512sum --check --strict 'sha512sum.txt' "${DOCKERDIR}/checksums/bootstrap_sha512sum.txt"
 
-docker build --tag="nfnty/${IPREFIX}-${INAME}:${ITAG}" "${DOCKERDIR}"
+docker build --tag="nrandell/${IPREFIX}-${INAME}:${ITAG}" "${DOCKERDIR}"

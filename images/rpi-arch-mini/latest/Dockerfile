@@ -1,8 +1,8 @@
 FROM scratch
 
-MAINTAINER "nfnty <docker@nfnty.se>"
+MAINTAINER "Nick Randell <nick@nickrandell.com>"
 
-ADD bootstrap/arch-mini-bootstrap_2015-04-08.tar.xz /
+ADD bootstrap/arch-mini-bootstrap_2015-04-15.tar.xz /
 
 ADD config/mirrorlist /etc/pacman.d/
 ADD config/locale.conf config/pacman.conf /etc/
@@ -13,8 +13,7 @@ RUN ln --symbolic /usr/share/zoneinfo/UTC /etc/localtime && \
     localedef --inputfile=en_US --charmap=UTF-8 en_US.UTF-8 && \
     localedef --inputfile=en_DK --charmap=UTF-8 en_DK.UTF-8
 
-RUN pacman-key --init && \
-    pacman-key --populate archlinux
+RUN pacman-key --init
 
 ADD crypto/ca-certificates/ /tmp/ca-certificates/
 RUN find /tmp/ca-certificates -mindepth 1 -type f -not -path '*/.gitignore' \
